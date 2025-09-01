@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BOM DIA 🤔</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>Boa dia! Aproveite para sorrir assim que acordar..</h1>  
+<h1>porque logo depois você vai perceber que é segunda</h1>
+  <p>O que voce ja tomou hoje? </p>
+
+  <div class="options">
+    <button onclick="responder(true)">Cafe</button>
+    <button onclick="responder(true)">Agua</button>
+    <button onclick="responder(false)">no cu</button>
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    function responder(correta) {
+      const msg = document.getElementById("message");
+      if (correta) {
+        msg.innerHTML = "🎉 Parabens! A proxima tomada de cu é sua 😍";
+      } else {
+        msg.innerHTML = "Acontece! Levanta a cabeça que logo vem mais 😂";
+      }
+    }
+  </script>
+</body>
+</html>
